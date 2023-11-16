@@ -1,11 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import SearchPage from './components/SearchPage';
+import { View, Text, TouchableOpacity, StyleSheet, Image, ImageBackground } from 'react-native';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Main" component={MainScreen} />
+        <Stack.Screen name="SearchPage" component={SearchPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function MainScreen({ navigation }) {
+  return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ImageBackground source={require("./assets/discos.png")} style={styles.discoStyle}/>
+      <View style={styles.content}>
+        <Image source={require("./assets/logo.png")} style={styles.logoStyle}/>
+        <Text style={styles.nameStartup}>WebyMemories</Text>
+        <TouchableOpacity
+          style={styles.loginButton}
+          onPress={() => navigation.navigate('SearchPage')}
+        >
+          <Text style={styles.loginButtonText}>Log In</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -13,8 +38,44 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#121212',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+  content: {
+    alignContent: "center",
+    width: '100%',
+    marginBottom: '100%',
+    paddingHorizontal: 20,
+    marginTop: "10%",
+  },
+  discoStyle:{
+    width: "100%",
+    height: "100%",
+  },
+  logoStyle:{
+    width: "18%",
+    height: "27%",
+    marginTop: "10%",
+    marginLeft: "40%",
+  },
+  nameStartup:{
+    textAlign: "center",
+    marginTop: "2%",
+    fontSize: 40,
+    color: "white",
+  },
+  loginButton: {
+    backgroundColor: '#1ED760',
+    borderRadius: 45,
+    paddingVertical: 15,
+    alignItems: 'center',
+    marginTop: "10%",
+  },
+  loginButtonText: {
+    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: "Roboto",
   },
 });
