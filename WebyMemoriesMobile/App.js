@@ -10,8 +10,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Main" component={MainScreen} />
-        <Stack.Screen name="SearchPage" component={SearchPage} />
+        <Stack.Screen 
+          name="Main" 
+          options={{ headerShown: false }} 
+          component={MainScreen} 
+        />
+        <Stack.Screen 
+          name="SearchPage" 
+          component={SearchPage} 
+          options={{ headerShown: false }} 
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -54,7 +62,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   logoStyle:{
-    width: "18%",
+    width: "20%",
     height: "27%",
     marginTop: "10%",
     marginLeft: "40%",
