@@ -1,6 +1,12 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TextInput, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import ViewArthur from './profiles/arthur/ViewArthur';
+import ViewVitorHugo from './profiles/vitor/ViewVitorHugo';
+import ViewIgor from './profiles/igor/ViewIgor';
+import ViewZeca from './profiles/zeca/ViewZeca';
+import ViewJosue from './profiles/josue/ViewJosue';
+import { useNavigation } from '@react-navigation/native';
 
 const squareData = [
   { name: 'Arthur Bauer', image: require("../assets/arthur.png") },
@@ -15,6 +21,22 @@ const squareData = [
 ];
 
 export default function SearchPage() {
+  const navigation = useNavigation();
+
+  const handleSquarePress = (name) => {
+    if (name === 'Arthur Bauer'){
+      navigation.navigate(ViewArthur, {nome: name});
+    } else if (name === 'Vitor Hugo'){
+      navigation.navigate(ViewVitorHugo);
+    } else if (name === 'Igor Moreno'){
+      navigation.navigate(ViewIgor);
+    } else if (name === 'José Henrique'){
+      navigation.navigate(ViewZeca);
+    }else if (name === 'Josué Elias'){
+      navigation.navigate(ViewJosue);
+    }
+  };
+
   return (
     <ScrollView style={{ flex: 1, backgroundColor: '#121212' }}>
       <View style={styles.content}>
@@ -34,27 +56,31 @@ export default function SearchPage() {
           />
         </View>
         <View style={styles.squareRow}>
-          {renderSquareRow(squareData.slice(0, 3))}
+          {renderSquareRow(squareData.slice(0, 3), handleSquarePress)}
         </View>
         <View style={styles.squareRow}>
-          {renderSquareRow(squareData.slice(3, 6))}
+          {renderSquareRow(squareData.slice(3, 6), handleSquarePress)}
         </View>
         <View style={styles.squareRow}>
-          {renderSquareRow(squareData.slice(6, 9))}
+          {renderSquareRow(squareData.slice(6, 9), handleSquarePress)}
         </View>
       </View>
     </ScrollView>
   );
 }
 
-const renderSquareRow = (data) => {
+const renderSquareRow = (data, onPress) => {
   return data.map((item, index) => (
-    <View style={styles.column} key={index}>
+    <TouchableOpacity
+      style={styles.column}
+      key={index}
+      onPress={() => onPress(item.name)}
+    >
       <View style={styles.square}>
         <Image source={item.image} style={styles.squareImage} />
       </View>
       <Text style={styles.squareLabelText}>{item.name}</Text>
-    </View>
+    </TouchableOpacity>
   ));
 };
 

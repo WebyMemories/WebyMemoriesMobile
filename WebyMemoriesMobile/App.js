@@ -2,6 +2,11 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SearchPage from './components/SearchPage';
+import ViewArthur from './components/profiles/arthur/ViewArthur'; 
+import ViewVitorHugo from './components/profiles/vitor/ViewVitorHugo';
+import ViewIgor from './components/profiles/igor/ViewIgor';
+import ViewZeca from './components/profiles/zeca/ViewZeca';
+import ViewJosue from './components/profiles/josue/ViewJosue';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ImageBackground } from 'react-native';
 
 const Stack = createStackNavigator();
@@ -9,7 +14,13 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+          headerTransparent: true,
+          headerTitle: '',
+        }}
+      >
         <Stack.Screen 
           name="Main" 
           options={{ headerShown: false }} 
@@ -19,6 +30,51 @@ export default function App() {
           name="SearchPage" 
           component={SearchPage} 
           options={{ headerShown: false }} 
+        />
+        <Stack.Screen
+          name="ViewArthur"
+          component={ViewArthur}
+          options={{ 
+            headerShown: false,
+            headerTransparent: true,
+            headerTitle: '',
+          }}
+        />
+        <Stack.Screen
+          name="ViewVitorHugo"
+          component={ViewVitorHugo}
+          options={{ 
+            headerShown: false,
+            headerTransparent: true,
+            headerTitle: '',
+          }}
+        />
+        <Stack.Screen
+          name="ViewIgor"
+          component={ViewIgor}
+          options={{ 
+            headerShown: false,
+            headerTransparent: true,
+            headerTitle: '',
+          }}
+        />
+        <Stack.Screen
+          name="ViewZeca"
+          component={ViewZeca}
+          options={{ 
+            headerShown: false,
+            headerTransparent: true,
+            headerTitle: '',
+          }}
+        />
+        <Stack.Screen
+          name="ViewJosue"
+          component={ViewJosue}
+          options={{ 
+            headerShown: false,
+            headerTransparent: true,
+            headerTitle: '',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
