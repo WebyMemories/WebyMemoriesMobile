@@ -102,7 +102,7 @@ const ViewIgor = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Primeiro Ano - Por que entrei nessa escola?</Text>
                 <Text style={styles.paragraphText}>
-                  No início, rotina remota, desafio a enfrentar,Amigos distantes, ansiedade a brotar.Tempo de reflexão, evolução mental,Foco constante, notas máximas, meta final.
+                  Período cheio de desafios. Mudança recente para Santa Catarina juntamente de ingressar no IF. Um momento marcado pela necessidade de adaptação: rotina nova, lugar novo, pessoas novas, distanciamento. Lembro especialmente de passar muita dificuldade em matemática, física e geografia.                
                 </Text>
               </View>
               <TouchableHighlight
@@ -133,7 +133,7 @@ const ViewIgor = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Segundo Ano - Eu não aguento mais</Text>
                 <Text style={styles.paragraphText}>
-                  Rotina mudada, novas pessoas, amigos conquistados, Amor encontrado, hoje minha namorada, destino traçado. Diretor do grêmio, lazer e esporte comandei, Interséries organizado, com minha turma venci, celebrei.Na festa junina, segundo lugar alcançado,História escrita, memórias do passado.
+                  Primeiro momento indo as aulas presenciais, ficava muito nervoso em estar novamente em ambientes público com muitas pessoas. Dei início ao TCC. Com o passar do tempo comecei a me enturmar, fiz muitos amizades que carrego com bastante carinho. Minha maior inimiga foi a Cristiane, agradeço todo dia por não ter mais que ter "aulas" com ela.                
                 </Text>
               </View>
               <TouchableHighlight
@@ -164,7 +164,8 @@ const ViewIgor = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Terceiro ano - Como eu sobrevivi?</Text>
                 <Text style={styles.paragraphText}>
-                Iniciei o TCC, desafio acadêmico a encarar, Líder de turma, responsabilidades a guiar. Estresse presente, fardo do liderar, Segundo lugar na festa junina, a história a continuar.                </Text>
+                  Ano em que consegui ficar mais confortável em interagir com as pessoas, foi quando comecei a me sentir mais confortável em ser eu mesmo. Fiz novas amizades, comecei a namorar, duvidei que iria conseguir desenvolver o meu TCC, consegui um 9,5 pela banca. Em retrocesso, esse foi provavelmente um dos melhores anos da minha vida.                
+                </Text>
               </View>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "rgb(40, 101, 49)" }}
@@ -194,7 +195,7 @@ const ViewIgor = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Desespero Constante</Text>
                 <Text style={styles.paragraphText}>
-                Iniciei o TCC, desafio acadêmico a encarar, Líder de turma, responsabilidades a guiar. Estresse presente, fardo do liderar, Segundo lugar na festa junina, a história a continuar.                </Text>
+                Tive pouca ajuda do meu orientador e coorientador, quem mais me auxiliaram foram meus colegas, como o Luís e o Vitor. Durante muito tempo questionei se conseguiria realmente entregar o meu projeto, perguntava toda semana pros meus amigos se eu conseiguiria me formar no ensino médio sem concluir o TCC. Porém, após muito esforço, consegui chegar em uma etapa satisfatória no meu sistema, em que me sentia confortável em apresentá-lo a banca.                </Text>
               </View>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "rgb(40, 101, 49)" }}

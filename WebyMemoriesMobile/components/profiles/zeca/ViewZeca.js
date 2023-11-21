@@ -102,7 +102,7 @@ const ViewZeca = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Primeiro Ano - Adaptação, EAD, Ansiedade</Text>
                 <Text style={styles.paragraphText}>
-                  No início, rotina remota, desafio a enfrentar,Amigos distantes, ansiedade a brotar.Tempo de reflexão, evolução mental,Foco constante, notas máximas, meta final.
+                  Fiquei muito feliz por entrar na Federal * aprendi muita coisa no primeiro ano, mas foi um ano muito complexo pelo fato de ser tudo EAD (Ansiedade Bateu)
                 </Text>
               </View>
               <TouchableHighlight
@@ -133,7 +133,7 @@ const ViewZeca = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Segundo Ano - Presencial, Festa Junina, Curtas</Text>
                 <Text style={styles.paragraphText}>
-                  Rotina mudada, novas pessoas, amigos conquistados, Amor encontrado, hoje minha namorada, destino traçado. Diretor do grêmio, lazer e esporte comandei, Interséries organizado, com minha turma venci, celebrei.Na festa junina, segundo lugar alcançado,História escrita, memórias do passado.
+                  Diria que foi um ano completo e difícil, mas ganhamos em segundo lugar na festa junina, fizemos viagem técnica, fui líder da sala, e aprendi e me apaixonei pela programação.                
                 </Text>
               </View>
               <TouchableHighlight
@@ -164,7 +164,8 @@ const ViewZeca = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>Terceiro ano - TCC, JIFC, FUTURO</Text>
                 <Text style={styles.paragraphText}>
-                Iniciei o TCC, desafio acadêmico a encarar, Líder de turma, responsabilidades a guiar. Estresse presente, fardo do liderar, Segundo lugar na festa junina, a história a continuar.                </Text>
+                  Ganhamos novamente em segundo lugar na Festa junina. Ansioso para terminar o ano, mas irei ficar com saudades dos amigos de verdade                
+                </Text>
               </View>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "rgb(81, 82, 69)" }}
@@ -194,7 +195,7 @@ const ViewZeca = ({ navigation }) => {
               <View style={styles.blueRectangle}>
                 <Text style={styles.lettraText}>QUE?</Text>
                 <Text style={styles.paragraphText}>
-                Iniciei o TCC, desafio acadêmico a encarar, Líder de turma, responsabilidades a guiar. Estresse presente, fardo do liderar, Segundo lugar na festa junina, a história a continuar.                </Text>
+                O tão esperado TCC chegou ao fim, mas deixou algumas questões no ar. Por exemplo, os empresários que iriam participar não compareceram e não foi explicado com clareza como a apresentação seria realizada. No final, na hora da apresentação, tivemos que nos virar para explicar nosso trabalho para mais de 5, 10 ou 15 pessoas ao mesmo tempo. Foi uma experiência legal, mas não tão boa quanto esperávamos ou como nos foi prometido. No meu caso, no entanto, tudo deu certo.                </Text>
               </View>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "rgb(81, 82, 69)" }}
