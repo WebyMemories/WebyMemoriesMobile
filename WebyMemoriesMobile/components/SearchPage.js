@@ -68,20 +68,6 @@ export default function SearchPage() {
           {renderSquareRow(squareData.slice(6, 9), handleSquarePress)}
         </View>
       </View>
-
-        <Tab.Navigator
-          initialRouteName='Home' 
-        >
-          <Tab.Screen
-            component={SearchPage}
-            name="Home"
-          />
-          <Tab.Screen 
-            component={Test}
-            name='Test'
-          />
-
-        </Tab.Navigator>
     </ScrollView>
   );
 }

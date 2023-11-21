@@ -16,10 +16,6 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      {/* <Tab.Navigator>
-        <Tab.Screen name="Home" component={SearchPage} />
-        <Tab.Screen name="A" component={MainScreen} />
-      </Tab.Navigator>  */}
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
