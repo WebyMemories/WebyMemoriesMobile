@@ -1,12 +1,14 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TextInput, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ViewArthur from './profiles/arthur/ViewArthur';
 import ViewVitorHugo from './profiles/vitor/ViewVitorHugo';
 import ViewIgor from './profiles/igor/ViewIgor';
 import ViewZeca from './profiles/zeca/ViewZeca';
 import ViewJosue from './profiles/josue/ViewJosue';
-import { useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Test from '../Test';
 
 const squareData = [
   { name: 'Arthur Bauer', image: require("../assets/arthur.png") },
@@ -22,6 +24,7 @@ const squareData = [
 
 export default function SearchPage() {
   const navigation = useNavigation();
+  const Tab = createBottomTabNavigator();
 
   const handleSquarePress = (name) => {
     if (name === 'Arthur Bauer'){
@@ -65,6 +68,20 @@ export default function SearchPage() {
           {renderSquareRow(squareData.slice(6, 9), handleSquarePress)}
         </View>
       </View>
+
+        <Tab.Navigator
+          initialRouteName='Home' 
+        >
+          <Tab.Screen
+            component={SearchPage}
+            name="Home"
+          />
+          <Tab.Screen 
+            component={Test}
+            name='Test'
+          />
+
+        </Tab.Navigator>
     </ScrollView>
   );
 }

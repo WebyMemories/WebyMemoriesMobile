@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SearchPage from './components/SearchPage';
 import ViewArthur from './components/profiles/arthur/ViewArthur'; 
 import ViewVitorHugo from './components/profiles/vitor/ViewVitorHugo';
@@ -10,10 +11,15 @@ import ViewJosue from './components/profiles/josue/ViewJosue';
 import { View, Text, TouchableOpacity, StyleSheet, Image, ImageBackground } from 'react-native';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
+      {/* <Tab.Navigator>
+        <Tab.Screen name="Home" component={SearchPage} />
+        <Tab.Screen name="A" component={MainScreen} />
+      </Tab.Navigator>  */}
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
