@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Modal, Tou
 import { LinearGradient } from 'expo-linear-gradient';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useState } from 'react';
+// import { Sound } from 'react-native-sound';
 
 const ViewJosue = ({ navigation }) => {
   const details = {
@@ -12,12 +13,37 @@ const ViewJosue = ({ navigation }) => {
     bio:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque libero vel massa commodo, id ultricies odio ultrices.',
   };
+    // const [isPlaying, setIsPlaying] = useState(false);
+    // const [audio, setAudio] = useState(null); // Store the Audio object
 
     // Estado para controlar a visibilidade do modal
     const [modalVisible1, setModalVisible1] = useState(false);
     const [modalVisible2, setModalVisible2] = useState(false);
     const [modalVisible3, setModalVisible3] = useState(false);
     const [modalVisible4, setModalVisible4] = useState(false);
+
+    // const handlePlayPause = () => {
+    //   if (!audio) {
+    //     const sound = new Sound('../../../musica.mp3', Sound.MAIN_BUNDLE, (error) => {
+    //       if (error) {
+    //         console.log('Erro ao carregar o arquivo de áudio', error);
+    //       } else {
+    //         setAudio(sound);
+    //       }
+    //     });
+    //   }
+
+    //   if (isPlaying) {
+    //     audio.pause(() => {
+    //       setIsPlaying(false);
+    //     });
+    //   } else {
+    //     audio.play(() => {
+    //       setIsPlaying(true);
+    //     });
+    //   }
+    // };
+
 
   return (
     <LinearGradient
@@ -32,21 +58,27 @@ const ViewJosue = ({ navigation }) => {
           <Image source={require('../../../assets/josue.jpeg')} style={styles.image} />
           <View style={styles.nameAndButton}>
             <Text style={styles.name}>{details.name}</Text>
-            <Image source={require("../../../assets/iconPlay.png")} style={{ width: 50, height: 50, marginRight: 10}}/>
+            {/* Play/Pause button */}
+            {/* <TouchableOpacity onPress={handlePlayPause}> */}
+              {/* <Image source={isPlaying ? require('../../../assets/iconPause.png') : require('../../../assets/iconPlay.png')}
+                style={{ width: 50, height: 50, marginRight: 10 }}
+              /> */}
+              <Image source={require("../../../assets/iconPause.png")} style={{ width: 50, height: 50, marginRight: 10}}/>
+            {/* </TouchableOpacity> */}
           </View>
           <View style={styles.bandaDetails}>
-            <Image source={require('../../../assets/postMalone.jpeg')} style={styles.banda} />
-            <Text style={styles.nomeBanda}>Post Malone</Text>
+            <Image source={require('../../../assets/pinkFloyd.jpg')} style={styles.banda} />
+            <Text style={styles.nomeBanda}>Pink Floyd</Text>
           </View>
           <View style={styles.album}>
-            <Text style={styles.albumInfo}>Post Malone ° 2005</Text>
+            <Text style={styles.albumInfo}> Shine on you crazy diamond ° 2004 </Text>
           </View>
           <View style={styles.function}>
             <Image source={require('../../../assets/functions.png')} style={styles.functionImage} />
           </View>
           <TouchableOpacity onPress={() => setModalVisible1(true)}>
             <View style={styles.bloco}>
-              <Text style={styles.blocoNome}>Mente de estudante remoto</Text>
+              <Text style={styles.blocoNome}>Primeiro ano - Depressão</Text>
               <View style={styles.autor}>
                 <Image source={require('../../../assets/iconDownload.png')} style={styles.iconDownload} />
                 <Text style={styles.autorNome}>Congratulations</Text>
@@ -56,7 +88,7 @@ const ViewJosue = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setModalVisible2(true)}>
             <View style={styles.bloco}>
-              <Text style={styles.blocoNome}>Vida nova</Text>
+              <Text style={styles.blocoNome}>Segundo ano - Recomeço</Text>
               <View style={styles.autor}>
                 <Image source={require('../../../assets/iconDownload.png')} style={styles.iconDownload} />
                 <Text style={styles.autorNome}>Congratulations</Text>
@@ -66,7 +98,7 @@ const ViewJosue = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setModalVisible3(true)}>
             <View style={styles.bloco}>
-              <Text style={styles.blocoNome}>Responsabilidades da vida</Text>
+              <Text style={styles.blocoNome}>Terceiro ano - Turbulento e desafiante</Text>
               <View style={styles.autor}>
                 <Image source={require('../../../assets/iconDownload.png')} style={styles.iconDownload} />
                 <Text style={styles.autorNome}>Congratulations</Text>
@@ -76,7 +108,7 @@ const ViewJosue = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setModalVisible4(true)}>
             <View style={styles.bloco}>
-              <Text style={styles.blocoNome}>E o TCC???</Text>
+              <Text style={styles.blocoNome}>Ainda da tempo de começar o TCC???</Text>
               <View style={styles.autor}>
                 <Image source={require('../../../assets/iconDownload.png')} style={styles.iconDownload} />
                 <Text style={styles.autorNome}>Congratulations</Text>
@@ -100,9 +132,9 @@ const ViewJosue = ({ navigation }) => {
             <View style={styles.modalContent}>
               {/* Retângulo azul */}
               <View style={styles.blueRectangle}>
-                <Text style={styles.lettraText}>Primeiro Ano - Mente de estudante remoto</Text>
+                <Text style={styles.lettraText}>Primero ano - depressão</Text>
                 <Text style={styles.paragraphText}>
-                  No início, rotina remota, desafio a enfrentar,Amigos distantes, ansiedade a brotar.Tempo de reflexão, evolução mental,Foco constante, notas máximas, meta final.
+                  ;-;
                 </Text>
               </View>
               <TouchableHighlight
@@ -131,9 +163,9 @@ const ViewJosue = ({ navigation }) => {
             <View style={styles.modalContent}>
               {/* Retângulo azul */}
               <View style={styles.blueRectangle}>
-                <Text style={styles.lettraText}>Segundo Ano - Vida nova</Text>
+                <Text style={styles.lettraText}>Segundo Ano - Recomeço</Text>
                 <Text style={styles.paragraphText}>
-                  Rotina mudada, novas pessoas, amigos conquistados, Amor encontrado, hoje minha namorada, destino traçado. Diretor do grêmio, lazer e esporte comandei, Interséries organizado, com minha turma venci, celebrei.Na festa junina, segundo lugar alcançado,História escrita, memórias do passado.
+                  Segundo ano foi um reajuste, saindo do clima de pandemia, aprendemos a viver em sociedade denovo
                 </Text>
               </View>
               <TouchableHighlight
@@ -162,9 +194,10 @@ const ViewJosue = ({ navigation }) => {
             <View style={styles.modalContent}>
               {/* Retângulo azul */}
               <View style={styles.blueRectangle}>
-                <Text style={styles.lettraText}>Terceiro ano - Responsabilidades da vida</Text>
+                <Text style={styles.lettraText}>Terceiro ano - Turbulento e desafiante</Text>
                 <Text style={styles.paragraphText}>
-                Iniciei o TCC, desafio acadêmico a encarar, Líder de turma, responsabilidades a guiar. Estresse presente, fardo do liderar, Segundo lugar na festa junina, a história a continuar.                </Text>
+                  Foi ano dificil, porém de muito aprendizado, e de muito crescimento, assim como muita responsabilidade.
+                </Text>
               </View>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "rgb(108, 4, 98)" }}
@@ -192,9 +225,10 @@ const ViewJosue = ({ navigation }) => {
             <View style={styles.modalContent}>
               {/* Retângulo azul */}
               <View style={styles.blueRectangle}>
-                <Text style={styles.lettraText}>E o TCC???</Text>
+                <Text style={styles.lettraText}>Ainda da tempo de fazer o TCC???</Text>
                 <Text style={styles.paragraphText}>
-                Iniciei o TCC, desafio acadêmico a encarar, Líder de turma, responsabilidades a guiar. Estresse presente, fardo do liderar, Segundo lugar na festa junina, a história a continuar.                </Text>
+                  O TCC foi o projeto mais desafiador que ja fiz, pela restrição de tempo de pressão de entregar um resultado bom, mas também foi o projeto com qual eu mais aprendi.
+                </Text>
               </View>
               <TouchableHighlight
                 style={{ ...styles.openButton, backgroundColor: "rgb(108, 4, 98)" }}
@@ -220,10 +254,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   scrollContainer: {
+    transform: [{translateX: -40}],
     justifyContent: 'center',
     alignItems: 'center',
   },
   backButton: {
+    transform: [{translateX: 40}],
     position: 'absolute',
     top: 20,
     left: 10,
@@ -260,12 +296,14 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
   },
   album: {
+    transform: [{translateX: 30}],
     flexDirection: 'row',
     marginTop: 10,
     marginRight: 220,
     width: '100%',
   },
   albumInfo: {
+    transform: [{translateX: 30}],
     color: '#B3B3B3',
     fontSize: 13,
   },
